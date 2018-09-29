@@ -51,8 +51,11 @@
 - **优点** Alloc，Cluster的管理不只是Task管理，形象化的问题排查，单一系统中master就是中心
 
 ### 评价
-Borg作为一个比较早的大尺寸的运维管理系统，有比较完整的功能以及相当不错的性能，目前几乎所有的Google集群的运算都迁移到Borg上面来了，这本身就可以证明其优越性。同时可以看到，Borg将机器的细节向用户都屏蔽了，来提高用户的开发效率。用户仅通过RPC来控制自己的job也降低了系统的复杂度。由于是Google实际生产使用的系统，其稳定性可靠性应该也是可以保证的。但是由于我并没有做过运维或者大尺度的集群的操作，没有切实的体验。
+- Borg作为一个比较早的大尺寸的运维管理系统，有比较完整的功能以及相当不错的性能，目前几乎所有的Google集群的运算都迁移到Borg上面来了，这本身就可以证明其优越性。同时可以看到，Borg将机器的细节向用户都屏蔽了，来提高用户的开发效率。用户仅通过RPC来控制自己的job也降低了系统的复杂度。由于是Google实际生产使用的系统，其稳定性可靠性应该也是可以保证的。但是由于我并没有做过运维或者大尺度的集群的操作，没有切实的体验。
 
+### Acknowledge
+- Abhishek Verma, Luis Pedrosa, Madhukar Korupolu, David Oppenheimer, Eric Tune and John Wilkes from Google Inc. *Large-scale cluster management at Google with Borg*  
+- Google Inc. *Borg, Omega, and Kubernetes*. From research.google.com
 ## Sigma
 ---
 
