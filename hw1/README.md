@@ -1,10 +1,10 @@
 # 集群调度系统笔记
 ## 目录
-- [Apollo](#Apollo(Microsoft))
-- [Borg](#Borg)
-- [Sigma](#Sigma)
-- [Omega](#Omega)
-- [Kubernetes](#Kubernetes)
+- [Apollo](#Apollo(Microsoft))(蔡忠玮)
+- [Borg](#Borg)()
+- [Sigma](#Sigma)(冯歆骅)
+- [Omega](#Omega)(赵樱)
+- [Kubernetes](#Kubernetes)(励颖)
 ## Apollo(Micrisoft)
 >Apollo是已经部署在微软的生产环境上的集群调度系统，每天负责上万台机器上数以百万计的高并发计算任务的调度和管理。
 
@@ -132,7 +132,7 @@ Kubernetes的核心组件是基于资源分配的任务调度。Kubernetes的调
 
 其中， Controller Manager主要用于管理计算节点（Node Controller）以及Pod副本（Replication Controller）等，Scheduler根据特定的算法和策略调度Pod到具体的计算节点，Kubelet通过apiserver或者监控本地的配置文件（eg. Kubeadm创建的Kuernetes集群），通过docker daemon创建Pod的container。
 
-###优缺点分析
+### 优缺点分析
 **优点**：
 - 可快速地部署应用程序而无须面对传统平台所具有的风险、动态地扩展应用程序以及更佳的资源分配；
 - 硬件使用率下降。由于容器的轻量特性以及更快速杀掉未使用的实体，对硬件的需求降低了40-50%；
@@ -143,5 +143,5 @@ Kubernetes的核心组件是基于资源分配的任务调度。Kubernetes的调
 - 默认的规化器依赖于应用程序属主提供的资源分配需求，而无视实时的消耗，将在每个节点上产生资源碎片；
 - 容器内允许运行的负载范围不够大；
 
-###评价
+### 评价
 基于资源分配的任务调度是Borg和Kubernetes的核心组件，Kubernetes的调度策略源自Borg, 但是为了更好的适应新一代的容器应用，以及各种规模的部署，Kubernetes的调度策略相应做的更加灵活，也更加容易理解和使用。然而，随着容器的爆发，Kubernetes初始设置与其在生产环境中大规模运行之间存在着巨大的鸿沟。未来几年，在管理这些部署和负载方面，它将面临第三方强有力的竞争如果其社区能正确地扩展该平台，Kubernetes的未来一片文明。
