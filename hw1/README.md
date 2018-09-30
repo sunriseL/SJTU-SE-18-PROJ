@@ -1,7 +1,7 @@
 # 集群调度系统笔记
 ## 目录
 - [Apollo](#Apollo(Microsoft))(蔡忠玮)
-- [Borg](#Borg)()
+- [Borg](#Borg)(王韡熙)
 - [Sigma](#Sigma)(冯歆骅)
 - [Omega](#Omega)(赵樱)
 - [Kubernetes](#Kubernetes)(励颖)
