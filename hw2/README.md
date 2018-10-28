@@ -95,21 +95,21 @@ Ceph是一种为优秀的性能、可靠性和可扩展性而设计的统一的�
 
 
 ##### Implement
-![ceph-系统结构](/image/ceph-系统架构.png)
+![ceph-系统结构](image/ceph-系统架构.png)
 - **解耦数据和元数据操作**
     通过消除文件分配表并将其替换为生成函数来解耦，这样就允许ceph利用OSD的智能来分布围绕数据访问、更新序列化、复制和可靠性、故障检测和恢复的复杂性
 <br/>
 - **动态分布式元数据管理**
     ceph利用基于动态子树分区的新型元数据集群架构，自适应地智能分配管理文件系统目录的责任，提高工作负载的性能
-    ![ceph-子树结构](/image/ceph-子树结构.png)
+    ![ceph-子树结构](image/ceph-子树结构.png)
 <br/>
-- **可靠的自主分布式对象存储**
+* **可靠的自主分布式对象存储**
     ceph将数据迁移，复制，故障检测和故障恢复以分布式方式委派给OSD，实现了容量和聚合性能的线性扩展
-    ![ceph-并行](/image/ceph-并行.png)
+    ![ceph-并行](image/ceph-并行.png)
 <br/>
-- **CRUSH算法**
+* **CRUSH算法**
     crush考虑了容灾域的隔离，能够实现各类负载的副本放置规则，还支持副本和EC两种数据冗余方式，提供了四种不同类型的Bucket（Uniform, List, Tree, Straw），充分考虑了实际生产过程中硬件的迭代式部署方式
-    ![ceph-crush](/image/ceph-crush.jpg)
+    ![ceph-crush](image/ceph-crush.jpg)
 
 
 ##### Pros
