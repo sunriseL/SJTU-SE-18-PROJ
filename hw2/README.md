@@ -126,25 +126,25 @@ Ceph是一种为优秀的性能、可靠性和可扩展性而设计的统一的�
 
 ##### Key Indicators
 - OSD吞吐量
-![ceph-p5](/image/ceph-p5.jpg)
+![ceph-p5](image/ceph-p5.jpg)
 通过观察，性能受到原始磁盘带宽（大约58MB/S）的限制
-![ceph-p6](/image/ceph-p6.jpg)
+![ceph-p6](image/ceph-p6.jpg)
 通过比较，EBOFS中的小读取和写入性能受到粗线程和锁定的影响，但对于大于32KB的写入大小，显示出优于其他读取工作负载，因为数据在磁盘上的范围内布局匹配写入大小
 <br/>
 - 写延迟
-![ceph-p7](/image/ceph-p7.jpg)
+![ceph-p7](image/ceph-p7.jpg)
 通过观察，两个以上的副本会导致小写入的最小额外成本，对于大型同步写入，传输时间占主导地位
 <br/>
 - 数据分布和可扩展性
-![ceph-p8](/image/ceph-p8.jpg)
+![ceph-p8](image/ceph-p8.jpg)
 通过观察，OSD写入性能与OSD群集的大小成线性比例，直到切换为止，在24个OSD处饱和。当更多PG降低OSD利用率的差异时，CRUSH和散列性能会提高
 <br/>
 - 元数据更新延迟
-![ceph-p9](/image/ceph-p9.png)
+![ceph-p9](image/ceph-p9.png)
 通过观察，使用本地磁盘可以避免初始网络往返，从而降低写入延迟。
 <br/>
 - 元数据缩放
-![ceph-p10](/image/ceph-p10.jpg)
+![ceph-p10](image/ceph-p10.jpg)
 随着集群增长到128个节点，对于大多数工作负载而言，效率下降不超过完美线性扩展的50%，大大提高了现有系统的性能、
 
 ##### Comment
