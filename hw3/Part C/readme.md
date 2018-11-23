@@ -96,7 +96,7 @@ Created topic "test6".
  ![改变线程数](../image/consumer1.jpg)
 
  |threads|rebalance time(ms)| fetch time(ms)|fetch MB/ms|
- |--|--|--|--|--|
+ |--|--|--|--|
  |1|81|39251|12|
  |5|100|39796|11|
  |10|107|46204|10|
@@ -119,7 +119,8 @@ Created topic "test6".
 
 - 在zookeeper.connect添加其它服务器的host:port
 
- ![增加服务器IP](../image/cluster2.jpg)
+ ![修改](../image/cluster2.jpg)
+
 
 ## Related Command line
 ### 1. 启动 Zookeeper 并启动 Kafka
