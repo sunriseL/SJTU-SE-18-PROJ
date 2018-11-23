@@ -2,7 +2,7 @@
 import json
 from kafka import KafkaProducer
 
-producer = KafkaProducer(bootstrap_servers='localhost:9092')
+producer = KafkaProducer(bootstrap_servers='59.78.46.195:9092')
 
 msg_dict = {
     "sleep_time": 1,
