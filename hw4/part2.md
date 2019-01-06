@@ -29,12 +29,15 @@ sudo apt install virtualbox-5.2
 
 ### 安装Kubectl
 - Kubectl是Kubernetes命令行工具，可在Kubernetes上部署和管理应用程序，使用kubectl可以检查群集资源；创建、删除、更新组件；查看新集群；并提交示例应用程序。
-</br>
+
 - 使用snap内核安装
+
 ```
 sudo snap install kubectl --classic
 ```
+
 - 验证安装是否成功
+
 ```
 kubectl version
 ```
