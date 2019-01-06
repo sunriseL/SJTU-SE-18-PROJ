@@ -26,7 +26,7 @@ sudo apt update
 ```
 sudo apt install virtualbox-5.2
 ```
-</br>
+
 ### 安装Kubectl
 - Kubectl是Kubernetes命令行工具，可在Kubernetes上部署和管理应用程序，使用kubectl可以检查群集资源；创建、删除、更新组件；查看新集群；并提交示例应用程序。
 </br>
@@ -50,7 +50,7 @@ curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releas
 ```
 minikube start --registry-mirror=https://registry.docker-cn.com
 ```
-- 如果无VirtualBox，则可用以下命令(要先装docker)
+- 如果无VirtualBox，则可用以下命令(需先装docker)
 ```
 sudo minikube start --vm-driver=none
 ```
@@ -59,35 +59,46 @@ sudo minikube start --vm-driver=none
 ```
 sudo kubectl run kube-nginx999 --image=nginx:latest --port=80 --image-pull-policy=IfNotPresent
 ```
-![tupian]
+![启动容器](img/create-service.jpg)
 
 ### 检查状态
 ```
 sudo kubectl get pods
 ```
-![tupian]
+![检查状态](img/get-pods.png)
 
 ### 发布服务
 ```
 sudo kubectl expose deployment kube-nginx999 --type=NodePort
 ```
-![tupian]
+![发布服务](img/deployment.png)
 
 ### 访问服务地址
 - 查询地址
 ```
 sudo minikube service kube-nginx999 --url
 ```
-![图片]
+![查询地址](img/nginx-url.png)
 
 - 打开浏览器访问
-![图片]
+![](img/nginx.png)
 
 ### 启动dashboard
 - 查询地址
 ```
 sudo minikube dashboard --url
 ```
-![图片]
+![](img/dashboard-url.png)
+- 打开浏览器，输入地址，可看到管理后台的可视化界面
+```
+sudo minikube dashboard --url
+```
+![](img/dashboard.jpg)
 
+### 通过kubectl进行控制
+- 查看所有节点
+```
+kubectl get pods --all-namespaces
+```
+![](img/all-pods.jpg)
 
