@@ -1,10 +1,9 @@
-# hw4目录
+# hw4
 - [Part1](#Part1)(赵樱)
-- [Part2](#Part2)(励颖)
 
 ---
 
-# Part1
+# Part1: container & image building & CI/CD
 
 Tool: Travis-CI, Docker, nginx(frontend)
 
